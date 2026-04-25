@@ -1,0 +1,28 @@
+# PC 端演示依赖（Windows / macOS / Linux）
+#
+# ────────────────────────────────────────────────────────
+# 一键安装（任意平台都适用）：
+#
+#   pip install -r training/demo_pc/requirements.txt
+#
+# ────────────────────────────────────────────────────────
+# 关于 apriltag 包的几个坑（重要！）：
+#
+# 1. PyPI 上的 `apriltag` 包：在 Windows 上需要 CMake + MSVC 编译，通常失败；
+#    在 Linux / macOS 上没问题。
+#
+# 2. `pupil-apriltags`：同一 C 库的另一套打包，有 Windows 预编译 wheel，
+#    pip 直接装，无需编译器。**Windows 必选这个。**
+#    注意它的 import 名是 `pupil_apriltags`（带下划线），不是 `apriltag`。
+#    项目代码已做兼容（两个名字都能 import）。
+#
+# 3. ❌ 不要用 `conda install -c conda-forge apriltag`：
+#    那是 C 库本体，没有 .Detector Python 接口；
+#    而且 `conda remove apriltag` 会级联卸载 numpy / mkl 等核心依赖。
+#
+# ────────────────────────────────────────────────────────
+
+numpy>=1.24.0
+opencv-python>=4.8.0
+pyyaml>=6.0
+pupil-apriltags>=1.0.4
