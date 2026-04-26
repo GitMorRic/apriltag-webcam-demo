@@ -34,7 +34,7 @@
 
 ```bash
 # 推荐 Python 3.10 ~ 3.12，用 conda 管理环境
-conda create -n vision python=3.11 -y
+conda create -n vision python=3.10 -y
 conda activate vision
 
 pip install -r training/demo_pc/requirements.txt
