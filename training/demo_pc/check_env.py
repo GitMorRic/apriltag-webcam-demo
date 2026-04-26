@@ -163,7 +163,7 @@ section("结论")
 print("""
   如果上面所有 [  OK  ] 均显示，可以直接运行：
 
-    cd WalkingRobotVision
+    cd apriltag-webcam-demo          # 仓库根目录
     python training/demo_pc/demo.py
 
   常见 FAIL 修复（建议一次性装全）：
@@ -175,7 +175,7 @@ print("""
     apriltag FAIL → pip install pupil-apriltags          （Windows 推荐）
                   或 pip install apriltag                 （Linux/macOS）
     yaml FAIL     → pip install pyyaml
-    路径 FAIL     → 确认从仓库根目录运行此脚本（cd WalkingRobotVision）
+    路径 FAIL     → 确认从仓库根目录运行此脚本（cd apriltag-webcam-demo）
 
   ⚠ Windows 注意：不要用 conda install -c conda-forge apriltag
      该包是 C 库，没有 Python 绑定的 .Detector 接口，
